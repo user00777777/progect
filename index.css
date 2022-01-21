@@ -1,0 +1,14 @@
+h1{text-align: ; color: rgb(13, 26, 1);margin-left: 1000px;}
+
+body{background: cornsilk;}
+td{height: 70px;
+width: 50px;
+border: 6px double;background: rgb(12, 6, 20);color: rgb(243, 240, 236);
+font-size: 30px;}
+th{font-size: 20px;}
+table{text-align: center;m: 50%;margin-top: 40px;}
+h2{border:3px solid ;height: 60px;width: 140px;
+text-align: center;
+position: absolute;
+left: 24%;
+top: 0.2px;}
