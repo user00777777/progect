@@ -1,0 +1,40 @@
+header {
+	font-size: 50px;
+	text-align: center;
+	padding-top: 30px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	padding-bottom: 10px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: saddlebrown
+}
+
+div {
+	height: 800px;
+	max-width: 700px;
+	border: dotted red 4px;
+	margin: auto
+}
+
+body {
+	background: antiquewhite
+}
+
+li {
+	font-size: 43px;
+	margin-left: 30px
+}
+
+div {
+	background: beige
+}
+
+span {
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-name: word;
+	animation-name: word
+}
+
+@-webkit-keyframes;
+@keyframes;
