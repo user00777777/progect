@@ -1,7 +1,0 @@
-body{background:rgb(248, 240, 230) }
-h1{text-align: center;font-size: 3em;}
-.q1{text-align: center;font-size: 2.4em;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-font-weight: bolder;letter-spacing: 0.2px;padding-left: px;margin-left: 4%;}
-.q1{box-sizing: content-box;max-width: 600px;margin-left: 32%;}
-.q1:hover{color: rgb(240, 14, 14); box: shadow 0;5px;3px rgb(30, 209, 209);}
-h1{border:dotted 4px; background: ghostwhite;box-sizing: content-box; min-content;height: 100px;width: 500px;margin-left: 35%;padding-bottom: 7px;}
