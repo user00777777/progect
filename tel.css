@@ -1,0 +1,14 @@
+.flex {
+	display: grid;text-wrap;
+	grid-template-columns: 270px 160px ;
+	grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
+	grid-row-gap: 5px;grid-column-gap: 1px;align-content: center;}
+
+	.w{ background: rgb(238, 174, 202);border: 2px solid;
+	background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(224, 213, 230, 0.9294750755287009) 0%, rgba(224, 213, 230, 0.9294750755287009) 32%, rgba(224, 213, 230, 1) 61%, rgba(224, 213, 230, 0.9294750755287009) 62%, rgba(224, 213, 230, 0.9294750755287009) 100%, rgba(224, 213, 230, 0.9294750755287009) 107%);
+ text-align: center; justify-content: center;align-content: center;padding-top: 15px;word-wrap: break-word ;}
+	div {
+		font-size: 35px;
+		;
+	}
+	:nth-child(1){grid-row:span  ; text-align:end; font-size: 50px;font-weight: 700;letter-spacing: 4px;}
