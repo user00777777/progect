@@ -1,0 +1,131 @@
+.container {
+	display: grid;
+	grid-template-columns: 150px 560px 150px;
+	grid-template-rows: 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px 80px;
+	grid-auto-columns: we 0px;
+	grid-auto-rows: 0px;
+}
+
+div {
+	border: solid px;
+}
+
+.kran {
+	grid-column: span 3;
+}
+
+.r {
+	background: rgb(2, 0, 36);
+	background: linear-gradient(197deg, rgba(2, 0, 36, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(0, 212, 255, 1) 100%);
+	text-align: center;
+	font-size: 35px;
+	font-weight: bolder;
+	padding-top: 5px;
+	border-radius: 10px;
+}
+
+.kran {
+	text-align: center;
+	border-radius: 20px;
+	font-size: 40px;
+	font-weight: bolder;
+	background: rgb(2, 0, 36);
+	background: linear-gradient(197deg, rgba(2, 0, 36, 1) 0%, rgba(24, 255, 51, 1) 9%, rgba(2, 215, 242, 1) 97%, rgba(0, 212, 255, 1) 100%);
+}
+
+.w {
+	font-size: 30px;
+	word-break: break-all;
+	font-weight: bolder;
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(252, 255, 244, 1) 0%, rgba(223, 229, 215, 1) 40%, rgba(179, 190, 173, 1) 100%);
+	border-radius: 10px;
+}
+
+#h {
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	margin-left: 240px;
+}
+
+#proezd {
+	border-radius: 10px;
+	text-align: center;
+	font-size: 50px;
+	letter-spacing: 10px;
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(238, 238, 238, 1) 0%, rgba(204, 204, 204, 1) 100%);
+	/* Chrome10-25,Safari5.1-6 */ border-radius: 20px;
+}
+
+#h {
+	font-size: 40px;
+	font-weight: bolder;
+	height: 70px;
+	width: 140px;
+	background: rgb(131, 58, 180);
+	background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(162, 7, 233, 1) 0%, rgba(208, 93, 149, 1) 0%, rgba(252, 176, 69, 1) 100%);
+ text-align: center;padding-top: 10px;border-radius: 10px;}
+
+#grp {
+	background: yellow;
+	font-size: 36px;
+	text-align: center;
+	font-weight: bolder;
+	border-radius: 20px;
+	padding-top: 10px;
+}
+
+#gsm {
+	background: red;
+	color: rgba(238, 238, 238, 1);
+	text-align: center;
+	font-size: 40px;
+}
+
+#electro {
+	background: rgb(131, 58, 180);
+	padding-top: 8px;
+	width: 150px;
+	height: 80px;
+	background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(233, 56, 7, 1) 0%, rgba(252, 176, 69, 1) 100%);
+	font-size: 50px;
+	text-align: center;
+	border-radius: 20px;
+	im
+}
+
+#menu {
+	text-align: center;
+	font-size: 50px;
+	letter-spacing: 10px;
+	font-weight: bolder;
+	color: coral;
+}
+
+#wc {
+	width: 150px;
+	height: 80px;
+
+	margin-left: 400px;
+	border-radius: 20px;
+	text-align: center;
+	color: white;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 45px;
+
+	;
+}
+
+img {
+	height: 80px;
+	width: 550px;
+	padding-bottom: 22px;
+	
+	z-index 3;
+}
+
+#wcc {
+	width: 160px;
+}
+
+a{color: red; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
