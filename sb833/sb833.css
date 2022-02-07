@@ -1,0 +1,21 @@
+.flex {
+	display: flex;
+flex-direction: column;align-items: center;
+}
+
+img {
+	width: 600px;
+	height: 300px;
+	text-align: center;
+}
+
+h1 {
+x;text-align: center;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+	a{color: red;}
+	.menu{height: 40px;width: 110px; position: absolute;top:5px; text-align: center; ;}
+	body{background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,136,1) 0%,rgba(255,255,136,1) 100%); /* Chrome10-25,Safari5.1-6 */}
+	
+
+
+	
