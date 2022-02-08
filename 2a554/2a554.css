@@ -1,0 +1,9 @@
+
+.flex{display: flex;flex-direction: column;}
+.ff{height: 300px;width: 530px; align-items: center;}
+.fft{text-align: center;}
+.a{text-align: center;}
+h1{text-align: center;font-family: 'Abril Fatface', cursive;}
+a{color: red; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+ol{font-size: 29px;}
+body{font-family: 'Syne Tactile', cursive;}
