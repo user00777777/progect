@@ -1,0 +1,4 @@
+.container {text-align: center;height: 600px;width: 700px;border: dotted 3px greenyellow;font-size: xx-large;padding: 10px;margin: 10px; 
+}
+body{background: -webkit-linear-gradient(top, rgba(242,249,254,1) 0%,rgba(214,240,253,1) 100%); /* Chrome10-25,Safari5.1-6 */}
+a{color: red;}
