@@ -12,7 +12,7 @@ if(i=='Петриченко'||i==26223){b=arr[0]}
 else if(i=='тригуб'||'Тригуб'){b=arr[1]
 }
 
-else {b=arr[2]
+else {(b=arr[2])
 };
 document.getElementById('ansver').innerHTML+=b;
 }
