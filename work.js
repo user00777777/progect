@@ -8,7 +8,7 @@ let i=document.getElementById('inp').value;
 
 
 let b;
-if(i=='петриченко'||i==26223){b=arr[0]}
+if(i=='Петриченко'||i==26223){b=arr[0]}
 else if(i=='тригуб'||'Тригуб'){b=arr[1]
 }
 
