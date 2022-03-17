@@ -30,23 +30,23 @@ let vital=parseFloat( sinkevich.filter(el=>el==day||el==day2));
 console.log(paha,day)
 
 switch (vital,stas,paha) {
-   case day:if(hour>=7&&hour<19&&day==vital)  {   out.innerHTML='Синькевич 1 смена'};
+   case day:if(hour>=7&&hour<19&&day==vital)  {   out.innerHTML='Синькевич 1 смена <br>Дежурный сантехник Писаренко'};
 
    
-   case  day2: if (hour>19&&day2==vital) out.innerHTML='Синькевичь  2 смена';
-
-   case day2:if (hour>=19&&stas==day2) {out2.innerHTML='Круглый 2 смена';//out2.style.add='out3'
+   case  day2: if (hour>19&&day2==vital) out.innerHTML='Синькевичь  2 смена <br>Дежурный сантехник Писаренко';
+ 
+   case day2:if (hour>=19&&stas==day2) {out2.innerHTML='Круглый 2 смена<br>Дежурный сантехник Головченко С.';//out2.style.add='out3'
       
    }
-   case day:if (hour>=7&&hour<19&&day==stas) {out.innerHTML='Круглый 1 смена';}
-   case day:if(hour>=7&&hour<19&&day==paha)  {out2.innerHTML='Лысенко 1 смена';     };
+   case day:if (hour>=7&&hour<19&&day==stas) {out.innerHTML='Круглый 1 смена <br>Дежурный сантехник Головченко С.';}
+   case day:if(hour>=0&&hour<19&&day==paha)  {out2.innerHTML='Дежурный электрик Лысенко П. 1 смена <br>Дежурный сантехник Немченко В.';     };
 
    
-   case  day2: if (hour>19&&day2==paha) out.innerHTML='Лысенко  2 смена';
-   case day:if(hour>7&&hour<19&&day==vasj)  {   out.innerHTML='Малько 1 смена'};
+   case  day2: if (hour>19&&day2==paha) out.innerHTML='Лысенко  2 смена <br>Дежурный сантехник Немченко В.';
+   case day:if(hour>7&&hour<19&&day==vasj)  {   out.innerHTML='Малько 1 смена <br>Дежурный сантехник Ничипорчук А.'};
 
    
-   case  day2: if (hour>19&&day2==vasj) out.innerHTML='Малько  2 смена';
+   case  day2: if (hour>19&&day2==vasj) out.innerHTML='Малько  2 смена <br>Дежурный сантехник Ничипорчук А';
 
 
       
