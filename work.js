@@ -29,7 +29,7 @@ let vital=parseFloat( sinkevich.filter(el=>el==day||el==day2));
 
 console.log(paha,day)
 
-switch (vital,stas,paha,vasj) {
+switch (vital,stas,paha) {
    case day:if(hour>=7&&hour<19&&day==vital)  {   out.innerHTML='Дежурный электрик Синькевич <br> 1 смена <br>Дежурный сантехник Писаренко'};
 
    
