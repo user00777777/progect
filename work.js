@@ -38,7 +38,7 @@ switch (vital,stas,paha,vasj) {
    case day2:if (hour>=19&&stas==day2) {out2.innerHTML='Дежурный электрик Круглый 2 смена<br>Дежурный сантехник Головченко С.';//out2.style.add='out3'
       
    }
-   case day:if (hour>=7&&hour<19&&day==stas) {out.innerHTML='Круглый 1 смена <br>Дежурный сантехник Головченко С.';}
+   case day:if (hour>=7&&hour<19&&day==stas) {out3.innerHTML='Круглый 1 смена <br>Дежурный сантехник Головченко С.';}
    case day:if(hour>=0&&hour<19&&day==paha)  {out2.innerHTML='Дежурный электрик Лысенко П. 1 смена <br>Дежурный сантехник Немченко В.';     };
 
    
