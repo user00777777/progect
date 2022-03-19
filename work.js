@@ -49,7 +49,7 @@ switch (vital,stas,paha,vasj) {
    case day:if(hour>=7&&hour<19&&day==vasj)  {   out4.innerHTML='Дежурный электрик Малько <br>1 смена <br>Деж. сантехник Ничипорчук А.'};
 
    
-   case  day2: if (hour>=19&&day2==vasj) out4.innerHTML=' Дежурный электрик<span id="vas"> Малько</span> <br> 2 смена <br>Деж. сантехник<span id="vas"> Ничипорчук А</span>';
+   case  day2: if (hour>=19&&day2==vasj) out4.innerHTML=' Дежурный электрик<span id="vas"> Малько</span> <br> 2 смена <br>Деж. сантехник<span > Ничипорчук А</span>';
 
 
       
