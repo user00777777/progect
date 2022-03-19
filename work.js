@@ -33,23 +33,23 @@ let vital=parseFloat( sinkevich.filter(el=>el==day||el==day2));
 console.log(paha,day)
 
 switch (vital,stas,paha,vasj) {
-   case day:if(hour>=7&&hour<19&&day==vital)  {   out.innerHTML='Дежурный электрик Синькевич <br> 1 смена <br>Дежурный сантехник Писаренко'};
+   case day:if(hour>=7&&hour<19&&day==vital)  {   out.innerHTML='Дежурный электрик Синькевич <br> 1 смена <br>Деж. сантехник Писаренко'};
 
    
-   case  day2: if (hour>=19&&day2==vital) out.innerHTML='Дежурный электрик Синькевич <br>  2 смена <br>Дежурный сантехник Писаренко';
+   case  day2: if (hour>=19&&day2==vital) out.innerHTML='Дежурный электрик Синькевич <br>  2 смена <br>Деж. сантехник Писаренко';
  
-   case day2:if (hour>=19&&stas==day2) {out2.innerHTML='Дежурный электрик Круглый 2 смена<br>Дежурный сантехник Головченко С.';//out2.style.add='out3'
+   case day2:if (hour>=19&&stas==day2) {out2.innerHTML='Дежурный электрик Круглый 2 смена<br>Деж. сантехник Головченко С.';//out2.style.add='out3'
       
    }
-   case day:if (hour>=7&&hour<19&&day==stas) {out2.innerHTML='Дежурный электрик Круглый <br>1 смена <br>Дежурный сантехник Головченко С.';}
-   case day:if(hour>=0&&hour<19&&day==paha)  {out3.innerHTML='Дежурный электрик Лысенко П.<br> 1 смена <br>Дежурный сантехник Немченко В.';     };
+   case day:if (hour>=7&&hour<19&&day==stas) {out2.innerHTML='Дежурный электрик <b>Круглый<b> <br>1 смена <br>Деж. сантехник Головченко С.';}
+   case day:if(hour>=0&&hour<19&&day==paha)  {out3.innerHTML='Дежурный электрик Лысенко П.<br> 1 смена <br>Деж. сантехник Немченко В.';     };
 
    
-   case  day2: if (hour>=19&&day2==paha) out3.innerHTML=' Дежурный электрик Лысенко <br> 2 смена <br>Дежурный сантехник Немченко В.';
-   case day:if(hour>=7&&hour<19&&day==vasj)  {   out4.innerHTML='Дежурный электрик Малько <br>1 смена <br>Дежурный сантехник Ничипорчук А.'};
+   case  day2: if (hour>=19&&day2==paha) out3.innerHTML=' Дежурный электрик Лысенко <br> 2 смена <br>Деж. сантехник Немченко В.';
+   case day:if(hour>=7&&hour<19&&day==vasj)  {   out4.innerHTML='Дежурный электрик Малько <br>1 смена <br>Деж. сантехник Ничипорчук А.'};
 
    
-   case  day2: if (hour>=19&&day2==vasj) out4.innerHTML=' Дежурный электрик Малько <br> 2 смена <br>Дежурный сантехник Ничипорчук А';
+   case  day2: if (hour>=19&&day2==vasj) out4.innerHTML=' Дежурный электрик Малько <br> 2 смена <br>Деж. сантехник Ничипорчук А';
 
 
       
