@@ -30,30 +30,33 @@ let stas=parseFloat( kryglui.filter(el=>el==day|| el==day2) );
 let vital=parseFloat( sinkevich.filter(el=>el==day||el==day2));              
 
 
-console.log(paha,day)
+//console.log(paha,day)
 
-switch (stas,paha,vasj,vital) {
-   case day:if(hour>=7&&hour<19&&day==vital)  {   out.innerHTML='Дежурный электрик <span>Синькевич B</span> <br> 1 смена <br>Деж. сантехник Писаренко'};
+let works= function work (){ {
+  if(hour>=7&&hour<19&&day==vital)  {   out.innerHTML='Дежурный электрик <span>Синькевич B</span> <br> 1 смена <br>Деж. сантехник Писаренко'};
 
    
-   case  day2: if (hour>=19&&day2==vital) out.innerHTML='Дежурный электрик <span>Синькевич B </span><br>  2 смена <br>Деж. сантехник Писаренко';
+    if (hour>=19&&day2==vital) out.innerHTML='Дежурный электрик <span>Синькевич B </span><br>  2 смена <br>Деж. сантехник Писаренко';
  
-   case day2:if (hour>=19&&stas==day2) {out2.innerHTML='Дежурный электрик <span>Круглый C</span> 2 смена<br>Деж. сантехник Головченко С.';//out2.style.add='out3'
-      
-   }
-   case day:if (hour>=7&&hour<19&&day==stas) {out2.innerHTML='Дежурный электрик <span>Круглый C</span> <br>1 смена <br>Деж. сантехник Головченко С.';}
-   case day:if(hour>=0&&hour<19&&day==paha)  {out3.innerHTML='Дежурный электрик <span>Лысенко П.</span><br> 1 смена <br>Деж. сантехник Немченко В.';     };
+  // case day2:if (hour>=19&&stas==day2) {out2.innerHTML='Дежурный электрик <span>Круглый C</span> 2 смена<br>Деж. сантехник Головченко С.';//out2.style.add='out3' }
+ if (hour>=7&&hour<19&&day==stas) {out2.innerHTML='Дежурный электрик <span>Круглый C</span> <br>1 смена <br>Деж. сантехник Головченко С.';}
+ if(hour>=0&&hour<19&&day==paha)  {out3.innerHTML='Дежурный электрик <span>Лысенко П.</span><br> 1 смена <br>Деж. сантехник Немченко В.';     };
 
    
-   case  day2: if (hour>=19&&day2==paha) out3.innerHTML=' Дежурный электрик<span> Лысенко</span> <br> 2 смена <br>Деж. сантехник Немченко В.';
-   case day:if(hour>=7&&hour<19&&day==vasj)  {   out4.innerHTML='Дежурный электрик <span id="vas">Малько<span> <br>1 смена <br>Деж. сантехник Ничипорчук А.'};
+  if (hour>=19&&day2==paha) out3.innerHTML=' Дежурный электрик<span> Лысенко</span> <br> 2 смена <br>Деж. сантехник Немченко В.';
+ if(hour>=7&&hour<19&&day==vasj)  {   out4.innerHTML='Дежурный электрик <span id="vas">Малько<span> <br>1 смена <br>Деж. сантехник Ничипорчук А.'};
 
    
-   case  day2: if (hour>=19&&day2==vasj) out4.innerHTML=' Дежурный электрик<span id="vas"> Малько.В</span> <br> 2 смена <br>Деж. сантехник Ничипорчук А';
+   cif (hour>=19&&day2==vasj) out4.innerHTML=' Дежурный электрик<span id="vas"> Малько.В</span> <br> 2 смена <br>Деж. сантехник Ничипорчук А';
 
 
       
    }
+
+
+works();
+
+
   
 
 
