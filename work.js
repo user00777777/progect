@@ -5,9 +5,7 @@ let malko=[1,2.2,3,4,5,6,7,8,9,10,11,12,13,14,15,18,19.2,22,23.2,26,27.2,30,31.2
 let kryglui=[1,2.2,3,4,5,6,7,8,9,10,11,12,13,14,15,16.2,19,20.2,23,24.2,27,28.2,31]
 let sinkevich=[1,2.2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17.2,20,21.2,24,25.2,26,27.2,30,31.2]
 let out=document.querySelector('.out');
-let out2=document.querySelector('.out2');
-let out3=document.querySelector('.out3');
-let out4=document.querySelector('.out4');
+
 
 
 
@@ -32,22 +30,22 @@ let vital=parseFloat( sinkevich.filter(el=>el==day||el==day2));
 
 //console.log(paha,day)
 
-let works= function work (){ {
+let works= function work (){ 
   if(hour>=7&&hour<19&&day==vital)  {   out.innerHTML='Дежурный электрик <span>Синькевич B</span> <br> 1 смена <br>Деж. сантехник Писаренко'}
 
    
 else    if (hour>=19&&day2==vital){ out.innerHTML='Дежурный электрик <span>Синькевич B </span><br>  2 смена <br>Деж. сантехник Писаренко'}
  
-else  if (hour>=19&&stas==day2) {out2.innerHTML='Дежурный электрик <span>Круглый C</span> 2 смена<br>Деж. сантехник Головченко С.';//out2.style.add='out3' }
-else if (hour>=7&&hour<19&&day==stas) {out2.innerHTML='Дежурный электрик <span>Круглый C</span> <br>1 смена <br>Деж. сантехник Головченко С.'}
-else if(hour>=0&&hour<19&&day==paha)  {out3.innerHTML='Дежурный электрик <span>Лысенко П.</span><br> 1 смена <br>Деж. сантехник Немченко В.'     }
+else  if (hour>=19&&stas==day2) {out.innerHTML='Дежурный электрик <span>Круглый C</span> 2 смена<br>Деж. сантехник Головченко С.'}
+else if (hour>=7&&hour<19&&day==stas) {out.innerHTML='Дежурный электрик <span>Круглый C</span> <br>1 смена <br>Деж. сантехник Головченко С.'}
+else if(hour>=0&&hour<19&&day==paha)  {out.innerHTML='Дежурный электрик <span>Лысенко П.</span><br> 1 смена <br>Деж. сантехник Немченко В.'     }
 
    
-else  if (hour>=19&&day2==paha){out3.innerHTML=' Дежурный электрик<span> Лысенко</span> <br> 2 смена <br>Деж. сантехник Немченко В}
-else if(hour>=7&&hour<19&&day==vasj)  {   out4.innerHTML='Дежурный электрик <span id="vas">Малько<span> <br>1 смена <br>Деж. сантехник Ничипорчук А.'}
+else  if (hour>=19&&day2==paha){out.innerHTML=' Дежурный электрик<span> Лысенко</span> <br> 2 смена <br>Деж. сантехник Немченко В'}
+else if(hour>=7&&hour<19&&day==vasj)  {   out.innerHTML='Дежурный электрик <span id="vas">Малько<span> <br>1 смена <br>Деж. сантехник Ничипорчук А.'}
 
    
- else  if (hour>=19&&day2==vasj{ out4.innerHTML=' Дежурный электрик<span id="vas"> Малько.В</span> <br> 2 смена <br>Деж. сантехник Ничипорчук А'}
+ else  if (hour>=19&&day2==vasj){ out.innerHTML=' Дежурный электрик<span id="vas"> Малько.В</span> <br> 2 смена <br>Деж. сантехник Ничипорчук А'}
 
 
       
@@ -97,7 +95,6 @@ if(date=='03.03.2022'){alert('краны')};
 if(date=='05.03.2022'){alert ('тельфера')};
 if(date=='11.05.2022'){alert('высота'   )   };
 if(date=='03.06.2022'){alert('группа Петриченко')}
-
 
 
 
