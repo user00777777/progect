@@ -36,18 +36,18 @@ let works= function work (){ {
   if(hour>=7&&hour<19&&day==vital)  {   out.innerHTML='Дежурный электрик <span>Синькевич B</span> <br> 1 смена <br>Деж. сантехник Писаренко'};
 
    
-    if (hour>=19&&day2==vital) out.innerHTML='Дежурный электрик <span>Синькевич B </span><br>  2 смена <br>Деж. сантехник Писаренко';
+else    if (hour>=19&&day2==vital) out.innerHTML='Дежурный электрик <span>Синькевич B </span><br>  2 смена <br>Деж. сантехник Писаренко';
  
-  // case day2:if (hour>=19&&stas==day2) {out2.innerHTML='Дежурный электрик <span>Круглый C</span> 2 смена<br>Деж. сантехник Головченко С.';//out2.style.add='out3' }
- if (hour>=7&&hour<19&&day==stas) {out2.innerHTML='Дежурный электрик <span>Круглый C</span> <br>1 смена <br>Деж. сантехник Головченко С.';}
- if(hour>=0&&hour<19&&day==paha)  {out3.innerHTML='Дежурный электрик <span>Лысенко П.</span><br> 1 смена <br>Деж. сантехник Немченко В.';     };
+else  if (hour>=19&&stas==day2) {out2.innerHTML='Дежурный электрик <span>Круглый C</span> 2 смена<br>Деж. сантехник Головченко С.';//out2.style.add='out3' }
+else if (hour>=7&&hour<19&&day==stas) {out2.innerHTML='Дежурный электрик <span>Круглый C</span> <br>1 смена <br>Деж. сантехник Головченко С.';}
+else if(hour>=0&&hour<19&&day==paha)  {out3.innerHTML='Дежурный электрик <span>Лысенко П.</span><br> 1 смена <br>Деж. сантехник Немченко В.';     };
 
    
-  if (hour>=19&&day2==paha) out3.innerHTML=' Дежурный электрик<span> Лысенко</span> <br> 2 смена <br>Деж. сантехник Немченко В.';
- if(hour>=7&&hour<19&&day==vasj)  {   out4.innerHTML='Дежурный электрик <span id="vas">Малько<span> <br>1 смена <br>Деж. сантехник Ничипорчук А.'};
+else  if (hour>=19&&day2==paha) out3.innerHTML=' Дежурный электрик<span> Лысенко</span> <br> 2 смена <br>Деж. сантехник Немченко В.';
+else if(hour>=7&&hour<19&&day==vasj)  {   out4.innerHTML='Дежурный электрик <span id="vas">Малько<span> <br>1 смена <br>Деж. сантехник Ничипорчук А.'};
 
    
-   cif (hour>=19&&day2==vasj) out4.innerHTML=' Дежурный электрик<span id="vas"> Малько.В</span> <br> 2 смена <br>Деж. сантехник Ничипорчук А';
+ else  if (hour>=19&&day2==vasj) out4.innerHTML=' Дежурный электрик<span id="vas"> Малько.В</span> <br> 2 смена <br>Деж. сантехник Ничипорчук А';
 
 
       
