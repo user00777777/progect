@@ -37,7 +37,7 @@ else    if (hour>=19&&day2==vital){ out.innerHTML='Дежурный электр
  
 else  if (hour>=19&&stas==day2) {out.innerHTML='Дежурный электрик <span>Круглый C.</span> 2 смена<br>Деж. сантехник Головченко С.'}
 else if (hour>=7&&hour<19&&day==stas) {out.innerHTML='Дежурный электрик <span>Круглый C.</span> <br>1 смена <br>Деж. сантехник Головченко С.'}
-else if(hour>=0&&hour<19&&day==paha)  {out.innerHTML='Дежурный электрик <span>Лысенко П.</span><br> 1 смена <br>Деж. сантехник Немченко В.'     }
+else if(hour>=7&&hour<19&&day==paha)  {out.innerHTML='Дежурный электрик <span>Лысенко П.</span><br> 1 смена <br>Деж. сантехник Немченко В.'     }
 
    
 else  if (hour>=19&&day2==paha){out.innerHTML=' Дежурный электрик<span> Лысенко</span> <br> 2 смена <br>Деж. сантехник Немченко В'}
