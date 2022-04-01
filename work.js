@@ -4,7 +4,6 @@ let malko=[3,4.2,7,8.2,11,12.2,15,16.2,19,20.2,23,24.2,27,28.2,]
 let kryglui=[1.2,4,5.2,8,9.2,12,13.2,16,17.2,20,21.2,24,25.2,28,29.2]
 let sinkevich=[1,2.2,5,6.2,9,10.2,13,14.2,17,18.2,21,22.2,25,26.2,29,30.2]
 let out=document.querySelector('.out');
-let out=document.querySelector('.out');
 
 
 
