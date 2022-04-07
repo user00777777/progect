@@ -34,9 +34,8 @@ const day = today.getDate()
 const month = today.getMonth() + 1;
 const year = today.getFullYear();
 const hour = today.getHours()
-const minuts = parseFloat('59')
+const minuts = today.getMinutes()
 const datanow = `${year}/${month}/${day}`;
-let day2 = parseFloat(`${day}'.2'`)//let day2 = Number(`${day}.2`).toExponential. 
 console.log(hour);
 console.log(minuts);
 
@@ -45,7 +44,9 @@ console.log(minuts);
 // let stas = kryglui.filter(el => el == day || el == day2);
 // let vital = sinkevich.filter(el => el == day || el == day2);
 
-const isFirstShift = hour >= 7 && hour <= 19;
+const isFirstShift = (hour >= 7 && minuts <= 59) && (hour <= 18 && minuts <= 59);
+
+const day2 = Number(`${isFirstShift ? day : hour >= 18 && hour <= 23 ? day : day - 1}.2`)
 
 const updatedWork = () => {
   return employees.map(employee => {
