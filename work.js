@@ -6,35 +6,44 @@
 
 const employees = [
   {
-    electrician: 'Лысенко П.',
-    plumber: 'Немченко В.',
-    workingDays: [2, 3.2, 6, 7.2, 10, 11.2, 14, 15.2, 18, 19.2, 22, 23.2, 26, 27.2, 30]
+    electrician: "Лысенко П.",
+    plumber: "Немченко В.",
+    workingDays: [
+      1.2, 4, 5.2, 8, 9.2, 12, 13.2, 16, 17.2, 20, 21.2, 24, 25.2, 28, 29.2,
+    ],
   },
   {
-    electrician: 'Малько B.',
-    plumber: 'Ничипорчук А.',
-    workingDays: [3, 4.2, 7, 8.2, 11, 12.2, 15, 16.2, 19, 20.2, 23, 24.2, 27, 28.2,]
+    electrician: "Малько B.",
+    plumber: "Ничипорчук А.",
+    workingDays: [
+      1, 2.2, 5, 6.2, 9, 10.2, 13, 14.2, 17, 18.2, 21, 22.2, 25, 26.2, 29, 30.2,
+    ],
   },
   {
-    electrician: 'Яременко А.',
-    plumber: 'Головченко С.',
-    workingDays: [1.2, 4, 5.2, 8, 9.2, 12, 13.2, 16, 17.2, 20, 21.2, 24, 25.2, 28, 29.2],
+    electrician: "Круглый С.В.",
+    plumber: "Головченко С.",
+    workingDays: [
+      2, 3.2, 6, 7.2, 10, 11.2, 14, 15.2, 18, 19.2, 22, 23.2, 26, 27.2, 30,
+      31.2,
+    ],
   },
   {
-    electrician: 'Синькевич B.',
-    plumber: 'Литвин',
-    workingDays: [1, 2.2, 5, 6.2, 9, 10.2, 13, 14.2, 17, 18.2, 21, 22.2, 25, 26.2, 29, 30.2],
+    electrician: "Синькевич B.",
+    plumber: "Литвин",
+    workingDays: [
+      3, 4.2, 7, 8, 2, 11, 12.2, 15, 16.2, 19, 20.2, 23, 24.2, 27, 28.2, 31,
+    ],
   },
-]
+];
 
-const out = document.querySelector('.out');
+const out = document.querySelector(".out");
 
-const today = new Date()
-const day = today.getDate()
+const today = new Date();
+const day = today.getDate();
 const month = today.getMonth() + 1;
 const year = today.getFullYear();
-const hour = today.getHours()
-const minuts = today.getMinutes()
+const hour = today.getHours();
+const minuts = today.getMinutes();
 const datanow = `${year}/${month}/${day}`;
 console.log(hour);
 console.log(minuts);
@@ -44,17 +53,23 @@ console.log(minuts);
 // let stas = kryglui.filter(el => el == day || el == day2);
 // let vital = sinkevich.filter(el => el == day || el == day2);
 
-const isFirstShift = (hour >= 7 && minuts <= 59) && (hour <= 18 && minuts <= 59);
+const isFirstShift = hour >= 7 && minuts <= 59 && hour <= 18 && minuts <= 59;
 
-const day2 = Number(`${isFirstShift ? day : hour >= 18 && hour <= 23 ? day : day - 1}.2`)
+const day2 = Number(
+  `${isFirstShift ? day : hour >= 18 && hour <= 23 ? day : day - 1}.2`
+);
 
 const updatedWork = () => {
-  return employees.map(employee => {
+  return employees.map((employee) => {
     if (employee.workingDays.includes(isFirstShift ? day : day2)) {
-      return out.innerHTML = `Дежурный электрик <span>${employee.electrician}</span> <br> ${isFirstShift ? '1' : '2'} смена <br>Деж. сантехник ${employee.plumber}`
+      return (out.innerHTML = `Дежурный электрик <span>${
+        employee.electrician
+      }</span> <br> ${isFirstShift ? "1" : "2"} смена <br>Деж. сантехник ${
+        employee.plumber
+      }`);
     }
-  })
-}
+  });
+};
 
 // const work = () => {
 //   if (hour >= 7 && hour < 19 && day == vital) { out.innerHTML = 'Дежурный электрик <span>Синькевич B</span> <br> 1 смена <br>Деж. сантехник Писаренко' }
@@ -70,34 +85,40 @@ const updatedWork = () => {
 // work();
 updatedWork();
 
-document.getElementById('btn').addEventListener('click', my);
+document.getElementById("btn").addEventListener("click", my);
 
 function my() {
-  let i = document.getElementById('inp').value;
-
+  let i = document.getElementById("inp").value;
 
   let b;
-  if (i == 'Петриченко' || i == 26223) { b = arr[0] }
-  else if (i == 'тригуб' || 'Тригуб') {
-    b = arr[1]
+  if (i == "Петриченко" || i == 26223) {
+    b = arr[0];
+  } else if (i == "тригуб" || "Тригуб") {
+    b = arr[1];
+  } else {
+    b = arr[2];
   }
-
-  else {
-    (b = arr[2])
-  };
-  document.getElementById('ansver').innerHTML += b;
+  document.getElementById("ansver").innerHTML += b;
 }
 
-let arr = ['ремонт кранов (03.03.2022)<br>тельфера(05.03.2022)<br>высота(11.05.2022)<br>группа_эл.безопасности(03.06.2022)<br> заточные_Сверлильные(12.10.2022)', '<br> димон<br>где твои удостоверения', 'неувязочка']
-let arr2 = ['22.02.2022', '05.03.2022', '11.05.2022', '03.06.2022']
+let arr = [
+  "ремонт кранов (03.03.2022)<br>тельфера(05.03.2022)<br>высота(11.05.2022)<br>группа_эл.безопасности(03.06.2022)<br> заточные_Сверлильные(12.10.2022)",
+  "<br> димон<br>где твои удостоверения",
+  "неувязочка",
+];
+let arr2 = ["22.02.2022", "05.03.2022", "11.05.2022", "03.06.2022"];
 
-const date = (new Date()).toLocaleDateString();
+const date = new Date().toLocaleDateString();
 console.log(date);
-if (date == '03.03.2022') { alert('краны') };
-if (date == '05.03.2022') { alert('тельфера') };
-if (date == '11.05.2022') { alert('высота') };
-if (date == '03.06.2022') { alert('группа Петриченко') }
-
-
-
-
+if (date == "03.03.2022") {
+  alert("краны");
+}
+if (date == "05.03.2022") {
+  alert("тельфера");
+}
+if (date == "11.05.2022") {
+  alert("высота");
+}
+if (date == "03.06.2022") {
+  alert("группа Петриченко");
+}
