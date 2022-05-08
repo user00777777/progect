@@ -8,7 +8,7 @@ const employees = [
   {
     electrician: "Лысенко П.",
     plumber: "Немченко В.",
-    pre: function () {
+    differentShifts: function () {
       isFirstShift
         ? (out.innerHTML = `Предыдущая смена была ${employees[2].electrician}</br> следующая смена ${employees[3].electrician}  `)
         : (out.innerHTML = `Предыдущая смена была ${employees[1].electrician}</br> следующая смена ${employees[2].electrician}`);
@@ -20,7 +20,7 @@ const employees = [
   {
     electrician: "Малько B.",
     plumber: "Ничипорчук А.",
-    pre: function () {
+    differentShifts: function () {
       isFirstShift
         ? (out.innerHTML = `Предыдущая смена была ${employees[3].electrician}</br> следующая смена ${employees[0].electrician}`)
         : (out.innerHTML = `Предыдущая смена была ${employees[2].electrician}</br> следующая смена ${employees[3].electrician}`);
@@ -32,7 +32,7 @@ const employees = [
   {
     electrician: "Круглый С.В.",
     plumber: "Головченко С.",
-    pre: function () {
+    differentShifts: function () {
       isFirstShift
         ? (out.innerHTML = `Предыдущая смена была ${employees[0].electrician}</br> следующая смена ${employees[1].electrician}`)
         : (out.innerHTML = `Предыдущая смена была ${employees[3].electrician}</br> следующая смена ${employees[0].electrician}`);
@@ -45,7 +45,7 @@ const employees = [
   {
     electrician: "Синькевич B.",
     plumber: "Литвин",
-    pre: function () {
+    differentShifts: function () {
       isFirstShift
         ? (out.innerHTML = `Предыдущая смена была ${employees[1].electrician}</br> следующая смена ${employees[2].electrician}`)
         : (out.innerHTML = `Предыдущая смена была ${employees[0].electrician}</br> следующая смена ${employees[1].electrician}`);
@@ -97,7 +97,7 @@ o.addEventListener("click", (event) => {
   if (event.target.tagName == "SPAN") {
     return employees.map((el) => {
       if (el.workingDays.includes(isFirstShift ? day : day2)) {
-        el.pre();
+        el.differentShifts();
       }
     });
   }
