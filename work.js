@@ -8,7 +8,11 @@ const employees = [
   {
     electrician: "Лысенко П.",
     plumber: "Немченко В.",
-    pre: 1.2,
+    pre: function () {
+      isFirstShift
+        ? (out.innerHTML = `Предыдущая смена была ${employees[2].electrician}</br> следующая смена ${employees[3].electrician}  `)
+        : (out.innerHTML = `Предыдущая смена была ${employees[1].electrician}</br> следующая смена ${employees[2].electrician}`);
+    },
     workingDays: [
       1.2, 4, 5.2, 8, 9.2, 12, 13.2, 16, 17.2, 20, 21.2, 24, 25.2, 28, 29.2,
     ],
@@ -16,7 +20,11 @@ const employees = [
   {
     electrician: "Малько B.",
     plumber: "Ничипорчук А.",
-    pre: 1.1,
+    pre: function () {
+      isFirstShift
+        ? (out.innerHTML = `Предыдущая смена была ${employees[3].electrician}</br> следующая смена ${employees[0].electrician}`)
+        : (out.innerHTML = `Предыдущая смена была ${employees[2].electrician}</br> следующая смена ${employees[3].electrician}`);
+    },
     workingDays: [
       1, 2.2, 5, 6.2, 9, 10.2, 13, 14.2, 17, 18.2, 21, 22.2, 25, 26.2, 29, 30.2,
     ],
@@ -24,7 +32,11 @@ const employees = [
   {
     electrician: "Круглый С.В.",
     plumber: "Головченко С.",
-    pre: 2,
+    pre: function () {
+      isFirstShift
+        ? (out.innerHTML = `Предыдущая смена была ${employees[0].electrician}</br> следующая смена ${employees[1].electrician}`)
+        : (out.innerHTML = `Предыдущая смена была ${employees[3].electrician}</br> следующая смена ${employees[0].electrician}`);
+    },
     workingDays: [
       2, 3.2, 6, 7.2, 10, 11.2, 14, 15.2, 18, 19.2, 22, 23.2, 26, 27.2, 30,
       31.2,
@@ -34,7 +46,9 @@ const employees = [
     electrician: "Синькевич B.",
     plumber: "Литвин",
     pre: function () {
-      console.log(isFirstShift);
+      isFirstShift
+        ? (out.innerHTML = `Предыдущая смена была ${employees[1].electrician}</br> следующая смена ${employees[2].electrician}`)
+        : (out.innerHTML = `Предыдущая смена была ${employees[0].electrician}</br> следующая смена ${employees[1].electrician}`);
     },
     workingDays: [
       3, 4.2, 7, 8.2, 11, 12.2, 15, 16.2, 19, 20.2, 23, 24.2, 27, 28.2, 31,
@@ -76,19 +90,19 @@ const updatedWork = () => {
   });
 };
 // let electricians = () => {
-//   let o = document.querySelector(".out");
-//   console.log(o);
+let o = document.querySelector(".out");
+console.log(o);
 
-//   o.addEventListener("click", (event) => {
-//     if (event.target.tagName == "H1") {
-//       return employees.map((el) => {
-//         if (el.workingDays.includes(isFirstShift ? day : day2)) {
-//           employees[3].pre();
-//         }
-//       });
-//     }
-//   });
-// };
+o.addEventListener("click", (event) => {
+  if (event.target.tagName == "SPAN") {
+    return employees.map((el) => {
+      if (el.workingDays.includes(isFirstShift ? day : day2)) {
+        el.pre();
+      }
+    });
+  }
+});
+
 // electricians();
 // const work = () => {
 //   if (hour >= 7 && hour < 19 && day == vital) { out.innerHTML = 'Дежурный электрик <span>Синькевич B</span> <br> 1 смена <br>Деж. сантехник Писаренко' }
