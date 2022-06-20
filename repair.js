@@ -25,7 +25,7 @@ function telChange798() {
     return rr;
   };
   let r = result(month);
-  tel798.innerHTML = `тельфер не поцеплен упругое тело заменено(резиновая муфта)`;
+  tel798.innerHTML = `трансмиссия заменена полностью(муфты иупругое тело)`;
 }
 
 function telChange() {
