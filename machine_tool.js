@@ -1,13 +1,13 @@
-let sb051 = document
-  .getElementById("sb051")
-  .addEventListener("click", Sbrepair);
+let sb051 = document.getElementById("sb051");
+sb051.addEventListener("click", Sbrepair);
 function Sbrepair() {
-  d0 = new Date(2022, 6, 15); //year month day
+  d0 = new Date(2022, 6, 8); //year month day
   d1 = new Date();
   dt = (d1.getTime() - d0.getTime()) / (1000 * 60 * 60 * 24);
-  document.write(
+  dt = dt += 30;
+  console.log(dt);
+  sb051.innerHTML =
     "<strong>" +
-      Math.round(dt) +
-      "</strong> - столько дне прошло с начала 2013-го года..."
-  );
+    Math.round(dt) +
+    "</strong>  дней от замены пускателя привода фрезы";
 }
