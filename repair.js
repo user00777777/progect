@@ -1,3 +1,4 @@
+let s = "&nbsp";
 var today = new Date();
 var day = today.getDate();
 var month = today.getMonth() + 1;
@@ -7,59 +8,28 @@ console.log(year);
 let dates = [{ datesYear: [2022, 2023, 2024, 2025] }];
 let tel795 = document.getElementById("telf_795");
 let tel798 = document.querySelector("#telf_798");
-tel795.addEventListener("click", telChange);
+tel795.addEventListener("click", telChange795);
 tel798.addEventListener("click", telChange798);
-
 function telChange798() {
   tel798.setAttribute("id", "t");
-  let result = (m) => {
-    let rr;
-    switch (year) {
-      case 2022:
-        rr = m + 6 - 12;
-        break;
+  d0 = new Date(2022, 7, 1); //year month day
 
-      default:
-        break;
-    }
-    return rr;
-  };
-  let r = result(month);
-  tel798.innerHTML = `трансмиссия заменена полностью(муфты иупругое тело)`;
+  d1 = new Date();
+  dt = (d1.getTime() - d0.getTime()) / (1000 * 60 * 60 * 24);
+  dt = dt += 30;
+  console.log(dt);
+  dt = Math.round(dt);
+
+  tel798.innerHTML = `трансмиссия заменена полностью(муфты иупругое тело) прошло${s}${dt}${s}дней`;
 }
-
-function telChange() {
-  const oldDay = 9;
-  const oldMonth = 6;
-  const oldYear = 2022;
+function telChange795() {
+  tel795.setAttribute("id", "t795");
+  d0 = new Date(2022, 6, 15); //year month day
+  d1 = new Date();
+  dt = (d1.getTime() - d0.getTime()) / (1000 * 60 * 60 * 24);
+  dt = dt += 30;
+  console.log(dt);
+  dt = Math.round(dt);
   tel795.setAttribute("id", "t");
-
-  function count(month) {
-    let resultMonth;
-    switch (year) {
-      case 2022:
-        resultMonth = month + oldMonth - 12;
-        break;
-      case 2023:
-        resultMonth = month + 6;
-        break;
-      case 2024:
-        resultMonth = month + 12 + 6;
-
-        break;
-      case 2025:
-        resultMonth = month + 6 + 12 + 12;
-        break;
-
-      default:
-        resultMonth =
-          "Счетчик остановился полумуфта свое отработала(больше чем 3 года и дохрена)";
-    }
-    return resultMonth;
-  }
-  let r = count(month);
-  // let resultMonth = count(month);
-  //console.log(resultMonth, resultYear);
-
-  tel795.innerHTML = `Замена полумуфты на двигателе 9.06.22 прошло  ${r}месяцев `;
+  tel795.innerHTML = `Замена полумуфт на двигателе редукторе 9.06.22 прошло ${s} ${dt} ${s} дней `;
 }

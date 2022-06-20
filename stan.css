@@ -268,7 +268,9 @@ img{width: 150px;height: 100px; border-radius:20px  ; color: aliceblue;}
 .tele{letter-spacing: 10px; }
 .weldpolu{height:50px;font-size: 18px;
 margin-top: 59px;background: -webkit-linear-gradient(top, #ffff88 0%, #ffff88 100%);position: relative;}
-.sb832{background: -webkit-linear-gradient(top, rgba(210,223,237,1) 0%,rgba(200,215,235,1) 26%,rgba(190,208,234,1) 51%,rgba(166,192,227,1) 51%,rgba(175,199,232,1) 62%,rgba(186,208,239,1) 75%,rgba(153,181,219,1) 88%,rgba(121,155,200,1) 100%); /* Chrome10-25,Safari5.1-6 */}
+.sb832{background: black ;color:white}
 .sb980{background: -webkit-linear-gradient(top, rgba(254,255,255,1) 0%,rgba(221,241,249,1) 35%,rgba(160,216,239,1) 100%); /* Chrome10-25,Safari5.1-6 *//}
 kbd{font-size:11px; position:relative ;margin-bottom: 11px;}
-#sb051{font-size: 14px;background-color: gold ;color: red; }
+#sb{font-size: 14px;color: #86d97d;}
+.gold{color:gold}
+#sbb{font-size: 11px ;color: #86d97d;}
