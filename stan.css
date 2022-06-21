@@ -36,7 +36,7 @@
 .f1,
 .f2,
 .f4 {
-	border:
+	border:solid
 }
 
 
@@ -273,5 +273,5 @@ margin-top: 59px;background: -webkit-linear-gradient(top, #ffff88 0%, #ffff88 10
 kbd{font-size:11px; position:relative ;margin-bottom: 11px;}
 #sb{font-size: 14px;color: #86d97d;}
 .gold{color:gold}
-#sbb{font-size: 12px ;color: #86d97d;width:130px;height: 200px;z-index: 2;}
+#sbb{font-size: 12px ;color: #5c1e15;width:670px;height: 900px;z-index: 2;position: relative;right: 550px;bottom: 220px;}
 
