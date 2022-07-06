@@ -14,7 +14,7 @@ const employees = [
         : (out.innerHTML = `Предыдущая смена была ${employees[1].electrician}</br> следующая смена ${employees[2].electrician}`);
     },
     workingDays: [
-      1, 2.2, 5, 6.2, 9, 10.2, 13, 14.2, 17, 18.2, 21, 22.2, 25, 26.2, 29, 30.2,
+      3, 4.2, 7, 8.2, 11, 12.2, 15, 16.2, 19, 20.2, 23, 24.2, 27, 28.2,
     ],
     firstshift: () => {
       out.innerHTML = `Следующая первая смена дежурит <b >${employees[1].electrician}</b>`;
@@ -29,7 +29,7 @@ const employees = [
         : (out.innerHTML = `Предыдущая смена была ${employees[2].electrician}</br> следующая смена ${employees[3].electrician}`);
     },
     workingDays: [
-      2, 3.2, 6, 7.2, 10, 11.2, 14, 15.2, 18, 19.2, 22, 23.2, 26, 27.2, 30,
+      1, 2, 4, 5.2, 8, 9.2, 12, 13.2, 16, 17.2, 20, 21.2, 25, 26.2, 29, 30.2,
     ],
     firstshift: () => {
       out.innerHTML = `Следующая первая смена дежурит <b >${employees[2].electrician}</b>`;
@@ -44,7 +44,7 @@ const employees = [
         : (out.innerHTML = `Предыдущая смена была ${employees[3].electrician}</br> следующая смена ${employees[0].electrician}`);
     },
     workingDays: [
-      3, 4.2, 7, 8.2, 11, 12.2, 15, 16.2, 19, 20.2, 23, 24.2, 27, 28.2, 31.2,
+      1, 2.2, 5, 6.2, 9, 10.2, 13, 14.2, 17, 18.2, 21, 22.2, 25, 26.2, 29, 30.2,
     ],
     firstshift: () => {
       out.innerHTML = `Следующая первая смена дежурит <b >${employees[3].electrician}</b>`;
@@ -59,7 +59,7 @@ const employees = [
         : (out.innerHTML = `Предыдущая смена была ${employees[0].electrician}</br> следующая смена ${employees[1].electrician}`);
     },
     workingDays: [
-      1.2, 4, 5.2, 8, 9.2, 12, 13.2, 16, 17.2, 20, 21.2, 24, 25.2, 28, 29.2,
+      2, 3.2, 6, 7.2, 10, 11.2, 14, 15.2, 18, 19.2, 22, 23.2, 26, 27.2, 30,
     ],
     firstshift: () => {
       out.innerHTML = `Следующая первая смена дежурит <b >${employees[0].electrician}</b>`;
