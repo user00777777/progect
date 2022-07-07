@@ -21,11 +21,11 @@ function Sb833055() {
   dt = (d1.getTime() - d0.getTime()) / (1000 * 60 * 60 * 24);
   dt = dt += 30;
   console.log(dt);
-  sb833055.setAttribute("id", "sbb");
   dt = Math.round(dt);
+  sb833055.setAttribute("id", "sbb");
 
   sb833055.innerHTML =
     "вышел со строя блокконтакт на пуск привода фрезы  головки A1 поставили приставку пршло <strong>" +
-    dt +
-    "<strong/> дней";
+    dt;
+  ("<strong/> дней");
 }
