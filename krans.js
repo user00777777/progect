@@ -1,3 +1,4 @@
+let l = "lore";
 let kran2 = document.querySelector("#kran2");
 kran2.addEventListener("click", (event) => {
   let span = document.querySelector("#k2");
@@ -13,8 +14,8 @@ kran2.addEventListener("click", (event) => {
     console.log(dt);
     dt = Math.round(dt);
     span.innerHTML = `Замена пускателя на ход моста-слева направо 3-й пусктель хода моста прошло
-    ${br} ${dt} ${br}
-    дней`;
+    ${br} ${dt} ${br} дней
+    `;
   } else if (kNum2 !== "kran2") {
     return false;
   }
