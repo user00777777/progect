@@ -1,7 +1,7 @@
 .wrapper{display: flex;height:100vh;width:100%; align-items: center;flex-direction: column;justify-content: space-around;}
 .number_1{color: blueviolet;font-size: 20px;height: 50px;width: 400px;border-radius: 2px;border:2px red solid;margin: 10px;display: flex ;justify-content: center;
 justify-content: center;padding-top: 25px;border-color: rgb(157, 168, 111);background-color:aqua;text-decoration: dotted;text-transform: capitalize; }
-#new_k2{height: 500px; width: 600px;background-color: aquamarine;position:absolute;
+#new_k2{height: 500px; width: 400px;background-color: aquamarine;position:absolute;
 ;bottom: 3px;}
 
 #kran2{display: flex; justify-content: center;z-index: 2;}
