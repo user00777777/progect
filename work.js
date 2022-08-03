@@ -79,11 +79,6 @@ const datanow = `${year}/${month}/${day}`;
 console.log(hour);
 console.log(minuts);
 
-// let vasj = malko.filter(el => el == day || el == day2);
-// let paha = lusenko.filter(el => el == day2 || el == day);
-// let stas = kryglui.filter(el => el == day || el == day2);
-// let vital = sinkevich.filter(el => el == day || el == day2);
-
 const isFirstShift = hour >= 7 && minuts <= 59 && hour <= 18 && minuts <= 59;
 
 const day2 = Number(
@@ -100,7 +95,7 @@ const updatedWork = () => {
     }
   });
 };
-// let electricians = () => {
+
 let o = document.querySelector(".out");
 console.log(o);
 
