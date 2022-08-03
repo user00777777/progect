@@ -29,7 +29,7 @@ const employees = [
         : (out.innerHTML = `Предыдущая смена была ${employees[2].electrician}</br> следующая смена ${employees[3].electrician}`);
     },
     workingDays: [
-      1.2, 4, 5.2, 8, 9.2, 12, 13.2, 16, 17.2, 20, 21.2, 25, 26.2, 29, 30.2,
+      1, 2, 4, 5.2, 8, 9.2, 12, 13.2, 16, 17.2, 20, 21.2, 25, 26.2, 29, 30.2,
     ],
     firstshift: () => {
       out.innerHTML = `Следующая первая смена дежурит <b >${employees[2].electrician}</b>`;
