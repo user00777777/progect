@@ -1,170 +1,101 @@
-//for(let i=0;i<30;i++){document.write(`${i},`)}
-// let lusenko = [2, 3.2, 6, 7.2, 10, 11.2, 14, 15.2, 18, 19.2, 22, 23.2, 26, 27.2, 30]
-// let malko = [3, 4.2, 7, 8.2, 11, 12.2, 15, 16.2, 19, 20.2, 23, 24.2, 27, 28.2,]
-// let kryglui = [1.2, 4, 5.2, 8, 9.2, 12, 13.2, 16, 17.2, 20, 21.2, 24, 25.2, 28, 29.2]
-// let sinkevich = [1, 2.2, 5, 6.2, 9, 10.2, 13, 14.2, 17, 18.2, 21, 22.2, 25, 26.2, 29, 30.2]
+// let Mal = ([] = count(4, 2));
 
-const employees = [
-  {
-    electrician: "Лысенко П.",
-    plumber: "Немченко В.",
-    differentShifts: function () {
-      isFirstShift
-        ? (out.innerHTML = `Предыдущая смена была ${employees[2].electrician}</br> следующая смена ${employees[3].electrician}  `)
-        : (out.innerHTML = `Предыдущая смена была ${employees[1].electrician}</br> следующая смена ${employees[2].electrician}`);
-    },
-    workingDays: [
-      3, 4.2, 7, 8.2, 11, 12.2, 15, 16.2, 19, 20.2, 23, 24.2, 27, 28.2,
-    ],
-    firstshift: () => {
-      out.innerHTML = `Следующая первая смена дежурит <b >${employees[1].electrician}</b>`;
-    },
-  },
-  {
-    electrician: "Гекало.С",
-    plumber: "Ничипорчук А.",
-    differentShifts: function () {
-      isFirstShift
-        ? (out.innerHTML = `Предыдущая смена была ${employees[3].electrician}</br> следующая смена ${employees[0].electrician}`)
-        : (out.innerHTML = `Предыдущая смена была ${employees[2].electrician}</br> следующая смена ${employees[3].electrician}`);
-    },
-    workingDays: [
-      1, 2, 4, 5.2, 8, 9.2, 12, 13.2, 16, 17.2, 20, 21.2,24, 25.2,  28, 29.2,
-    ],
-    firstshift: () => {
-      out.innerHTML = `Следующая первая смена дежурит <b >${employees[2].electrician}</b>`;
-    },
-  },
-  {
-    electrician: "Круглый С.В.",
-    plumber: "Головченко С.",
-    differentShifts: function () {
-      isFirstShift
-        ? (out.innerHTML = `Предыдущая смена была ${employees[0].electrician}</br> следующая смена ${employees[1].electrician}`)
-        : (out.innerHTML = `Предыдущая смена была ${employees[3].electrician}</br> следующая смена ${employees[0].electrician}`);
-    },
-    workingDays: [
-      1, 2.2, 5, 6.2, 9, 10.2, 13, 14.2, 17, 18.2, 21, 22.2, 25, 26.2, 29, 30.2,
-    ],
-    firstshift: () => {
-      out.innerHTML = `Следующая первая смена дежурит <b >${employees[3].electrician}</b>`;
-    },
-  },
-  {
-    electrician: "Синькевич B.",
-    plumber: "Литвин",
-    differentShifts: function () {
-      isFirstShift
-        ? (out.innerHTML = `Предыдущая смена была ${employees[1].electrician}</br> следующая смена ${employees[2].electrician}`)
-        : (out.innerHTML = `Предыдущая смена была ${employees[0].electrician}</br> следующая смена ${employees[1].electrician}`);
-    },
-    workingDays: [
-      2, 3.2, 6, 7.2, 10, 11.2, 14, 15.2, 18, 19.2, 22, 23.2, 26, 27.2, 30,
-    ],
-    firstshift: () => {
-      out.innerHTML = `Следующая первая смена дежурит <b >${employees[0].electrician}</b>`;
-    },
-  },
-];
+// let Paha = ([] = count(4, 3));
+// let Sin = ([] = count(4, 0));
+// let Krugluii = ([] = count(4, 1));
+let PahaLusenko = ([] = changeAr(count(4, 0), count(4, 1)));
+let Malko = ([] = changeAr(count(4, 1), count(4, 2)));
+let Sinkevish = ([] = changeAr(count(4, 3), count(4, 0)));
+let Kruglui = ([] = changeAr(count(4, 2), count(4, 3)));
+function changeAr(numb, str) {
+  let strAr = ([] = str.map((el) => el + ""));
+  let x = ([] = numb.concat(strAr));
+  return x.sort((a, b) => a - b);
+}
 
-const out = document.querySelector(".out");
+let dates = new Date();
+let month = dates.getMonth() + 1;
+let date = dates.getDate();
+let minute = dates.getMinutes();
+let hour = dates.getHours();
+date;
+month;
 
-const today = new Date();
-const day = today.getDate();
-const month = today.getMonth() + 1;
-const year = today.getFullYear();
-const hour = today.getHours();
-const minuts = today.getMinutes();
-const datanow = `${year}/${month}/${day}`;
-console.log(hour);
-console.log(minuts);
-
-const isFirstShift = hour >= 7 && minuts <= 59 && hour <= 18 && minuts <= 59;
-
-const day2 = Number(
-  `${isFirstShift ? day : hour >= 18 && hour <= 23 ? day : day - 1}.2`
-);
-
-const updatedWork = () => {
-  return employees.map((employee) => {
-    if (employee.workingDays.includes(isFirstShift ? day : day2)) {
-      return (out.innerHTML = `<h1 id="i"> Дежурныe</h1>
-      электрик <span>${employee.electrician}</span> <br> ${
-        isFirstShift ? "1" : "2"
-      } смена <br>Деж. сантехник ${employee.plumber}`);
+let isFirstShift =
+  hour < 19 && minute < 59 && hour > 7 && minute < 59 ? true : false;
+function count(a, b) {
+  let x = [];
+  for (let i = 1; i <= 31; i++) {
+    if (i % a == b) {
+      x.push(i);
     }
-  });
-};
-
-let o = document.querySelector(".out");
-console.log(o);
-
-o.addEventListener("click", (event) => {
-  if (event.target.tagName == "H1") {
-    return employees.map((el) => {
-      if (el.workingDays.includes(isFirstShift ? day : day2)) {
-        el.differentShifts();
-      }
-    });
   }
-  if (event.target.tagName == "SPAN") {
-    return employees.map((el) => {
-      if (el.workingDays.includes(isFirstShift ? day : false)) {
-        el.firstshift();
-      }
-    });
-  }
-});
-
-// electricians();
-// const work = () => {
-//   if (hour >= 7 && hour < 19 && day == vital) { out.innerHTML = 'Дежурный электрик <span>Синькевич B</span> <br> 1 смена <br>Деж. сантехник Писаренко' }
-//   else if (hour >= 19 && day2 == vital) { out.innerHTML = 'Дежурный электрик <span>Синькевич B </span><br>  2 смена <br>Деж. сантехник Писаренко' }
-//   else if (hour >= 19 && stas == day2) { out.innerHTML = 'Дежурный электрик <span>Яременко А.</span> 2 смена<br>Деж. сантехник Головченко С.' }
-//   else if (hour >= 7 && hour < 19 && day == stas) { out.innerHTML = 'Дежурный электрик <span>Яременко А.</span> <br>1 смена <br>Деж. сантехник Головченко С.' }
-//   else if (hour >= 7 && hour < 19 && day == paha) { out.innerHTML = 'Дежурный электрик <span>Лысенко П.</span><br> 1 смена <br>Деж. сантехник Немченко В.' }
-//   else if (hour >= 19 && day2 == paha) { out.innerHTML = ' Дежурный электрик<span> Лысенко</span> <br> 2 смена <br>Деж. сантехник Немченко В' }
-//   else if (hour >= 7 && hour < 19 && day == vasj) { out.innerHTML = 'Дежурный электрик <span id="vas">Малько B.<span> <br>1 смена <br>Деж. сантехник Ничипорчук А.' }
-//   else if (hour >= 19 && day2 == vasj) { out.innerHTML = ' Дежурный электрик<span id="vas"> Малько.В</span> <br> 2 смена <br>Деж. сантехник Ничипорчук А' }
-// };
-
-// work();
-updatedWork();
-
-document.getElementById("btn").addEventListener("click", my);
-
-function my() {
-  let i = document.getElementById("inp").value;
-
-  let b;
-  if (i == "Петриченко" || i == 26223) {
-    b = arr[0];
-  } else if (i == "тригуб" || "Тригуб") {
-    b = arr[1];
-  } else {
-    b = arr[2];
-  }
-  document.getElementById("ansver").innerHTML += b;
+  return x;
 }
+let strday2 = isFirstShift ? date : date + "";
 
-let arr = [
-  "ремонт кранов (03.03.2022)<br>тельфера(05.03.2022)<br>высота(11.05.2022)<br>группа_эл.безопасности(03.06.2022)<br> заточные_Сверлильные(12.10.2022)",
-  "<br> димон<br>где твои удостоверения",
-  "неувязочка",
+let allDuty = [
+  {
+    shift: Malko,
+    duty: "Малько",
+    nextOne: isFirstShift ? "Лисенко" : "Сінкевич",
+  },
+  {
+    shift: Sinkevish,
+    duty: "Сінкевич",
+    nextOne: isFirstShift ? "Круглий" : "Малько",
+  },
+  {
+    shift: PahaLusenko,
+    duty: "Лисенко",
+    nextOne: isFirstShift ? "Сінкевич" : "Круглий",
+  },
+  {
+    shift: Kruglui,
+    duty: "Круглий",
+    nextOne: isFirstShift ? "Малько" : "Малько",
+  },
 ];
-let arr2 = ["22.02.2022", "05.03.2022", "11.05.2022", "03.06.2022"];
 
-const date = new Date().toLocaleDateString();
-console.log(date);
-if (date == "03.03.2022") {
-  alert("краны");
+strday2;
+
+function outDuty(duty) {
+  let rr = duty.reduce(
+    (acc, el) => {
+      function cN(n) {
+        if (date <= 21 && month == 2 && n == "Круглий") return "Гекало";
+
+        return n;
+      }
+      if (el.shift.includes(strday2)) {
+        return (acc = { one: cN(el.duty), two: cN(el.nextOne) });
+      }
+      return acc;
+    },
+    0,
+    {}
+  );
+
+  let { one: Now_Shift, two: Next_Shift } = rr;
+  Now_Shift;
+  Next_Shift;
+  return {
+    first: () => {
+      return isFirstShift
+        ? `Зараз на первій зміні ${Now_Shift} `
+        : `Зараз на другій зміні ${Now_Shift}`;
+    },
+    second: () => {
+      return `Наступний діжурный ${Next_Shift}`;
+    },
+  };
 }
-if (date == "05.03.2022") {
-  alert("тельфера");
-}
-if (date == "11.05.2022") {
-  alert("высота");
-}
-if (date == "03.06.2022") {
-  alert("группа Петриченко");
-}
+
+let c = outDuty(allDuty);
+
+// console.log(c.first());
+// console.log(c.second());
+// console.log();
+let out = (document.querySelector(".out").innerHTML = c.first());
+let ds = (document.querySelector("#three").innerHTML = c.second());
+console.log(ds);

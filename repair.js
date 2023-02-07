@@ -33,3 +33,4 @@ function telChange795() {
   tel795.setAttribute("id", "t");
   tel795.innerHTML = `Замена полумуфт на двигателе редукторе 9.06.22 прошло ${s} ${dt} ${s} дней `;
 }
+console.log(1);
