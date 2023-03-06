@@ -23,7 +23,7 @@ date;
 month;
 
 let isFirstShift =
-  hour < 19 && minute < 59 && hour > 7 && minute < 59 ? true : false;
+  hour < 19 && minute < 59 && hour >= 7 && minute < 59 ? true : false;
 function count(a, b) {
   let x = [];
   for (let i = 1; i <= 31; i++) {
