@@ -12,6 +12,7 @@ function changeAr(numb, str) {
   let x = ([] = numb.concat(strAr));
   return x.sort((a, b) => a - b);
 }
+// console.log(Malko, PahaLusenko, Sinkevish);
 
 let dates = new Date();
 let month = dates.getMonth() + 1;
@@ -63,9 +64,7 @@ function outDuty(duty) {
   let rr = duty.reduce(
     (acc, el) => {
       function cN(n) {
-        if (date <= 21 && month == 2 && n == "Круглий") return "Гекало";
-
-        return n;
+        if (n) return n;
       }
       if (el.shift.includes(strday2)) {
         return (acc = { one: cN(el.duty), two: cN(el.nextOne) });
