@@ -33,4 +33,60 @@ function telChange795() {
   tel795.setAttribute("id", "t");
   tel795.innerHTML = `Замена полумуфт на двигателе редукторе 9.06.22 прошло ${s} ${dt} ${s} дней `;
 }
-console.log(1);
+
+document.querySelector(".b").addEventListener("click", displayText);
+function displayText() {
+  let inputElement = document.querySelector(".myInput");
+  let textOutputElement = document.querySelector("#out");
+  let text = inputElement.value;
+  fNums(text);
+
+  // Create an "li" node:
+  const node = document.createElement("li");
+
+  // Create a text node:
+  const textnode = document.createTextNode(text);
+
+  // Append the text node to the "li" node:
+  node.appendChild(textnode);
+
+  // Append the "li" node to the list:
+  document.getElementById("myList").appendChild(node);
+  inputElement.value = "";
+}
+
+let = num = "";
+let str_ing = "";
+let tr = document.querySelectorAll("[data-id]");
+let ar = [];
+function fNums(num) {
+  console.log(num);
+
+  for (let i = 0; i < tr.length; i++) {
+    if (tr[i].dataset.id == "Стена") {
+      tr[i].textContent = "Стена";
+      tr[i].style.fontSize = "50px";
+    }
+    if (tr[i].dataset.id == "Окна") {
+      tr[i].textContent = "Окна";
+      tr[i].style.fontSize = "50px";
+    }
+    if (tr[i].dataset.id == "Средние-ряды") {
+      tr[i].textContent = "Средние-ряды";
+      tr[i].style.fontSize = "50px";
+    }
+    if (tr[i].dataset.id == num) {
+      tr[i].style.color = "red";
+      tr[i].style.background = "aqua";
+      tr[i].style.fontSize = "40px";
+      tr[i].style.fontWeight = "700";
+    } else {
+      tr[i].style.color = "black";
+
+      // tr[i].setAttribute("class", "otherTelfers");
+    }
+  }
+}
+// console.log(str_ing);
+
+// console.log(num);

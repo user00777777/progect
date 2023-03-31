@@ -21,3 +21,14 @@ table{text-align: center;margin-top: 40px;}
 		#i{color:red}
 		#t{font-size: 17px;color: rgb(180, 222, 176);}
 		.gold{color:gold}
+.inp{  content: '\2713';  
+	text-align: center;
+	color: white;
+	line-height: 1em;
+	width: 100px;
+	height: 20px;
+	border: 2px inset #000;
+	border-radius: 0.25em;
+	margin: 0.25em;
+	display: inline-block;}
+	
