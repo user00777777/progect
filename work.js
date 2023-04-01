@@ -3,16 +3,19 @@
 // let Paha = ([] = count(4, 3));
 // let Sin = ([] = count(4, 0));
 // let Krugluii = ([] = count(4, 1));
-let PahaLusenko = ([] = changeAr(count(4, 0), count(4, 1)));
-let Malko = ([] = changeAr(count(4, 1), count(4, 2)));
-let Sinkevish = ([] = changeAr(count(4, 3), count(4, 0)));
-let Kruglui = ([] = changeAr(count(4, 2), count(4, 3)));
+let Sinkevish = ([] = changeAr(count(4, 0), count(4, 1)));
+let PahaLusenko = ([] = changeAr(count(4, 1), count(4, 2)));
+let Kruglui = ([] = changeAr(count(4, 3), count(4, 0)));
+let Malko = ([] = changeAr(count(4, 2), count(4, 3)));
 function changeAr(numb, str) {
   let strAr = ([] = str.map((el) => el + ""));
   let x = ([] = numb.concat(strAr));
   return x.sort((a, b) => a - b);
 }
-// console.log(Malko, PahaLusenko, Sinkevish);
+// console.log(Malko, "Малько");
+// console.log(PahaLusenko, "лысенко");
+// console.log(Sinkevish, "синкевич");
+// console.log(Kruglui, "круглый");
 
 let dates = new Date();
 let month = dates.getMonth() + 1;
@@ -33,7 +36,7 @@ function count(a, b) {
   }
   return x;
 }
-let strday2 = isFirstShift ? date : date + "";
+let strday2 = isFirstShift ? date : String(date);
 
 let allDuty = [
   {
