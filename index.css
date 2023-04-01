@@ -58,3 +58,6 @@ font-weight: 700;
 	font-weight: 700;
 
 }
+.wrap_inp{display: flex;justify-content: flex-start;}
+.telega{background-color:burlywood;color :darkmagenta}
+.vs_300{background-color:darkorange;color:#0b0302}
