@@ -88,7 +88,7 @@ function outDuty(duty) {
         : `Зараз на другій зміні ${Now_Shift}`;
     },
     second: () => {
-      return `Наступний діжурный ${Next_Shift}`;
+      return `Наступний черговий ${Next_Shift}`;
     },
   };
 }
