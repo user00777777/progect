@@ -35,7 +35,8 @@ function telChange795() {
 }
 
 document.querySelector(".b").addEventListener("click", displayText);
-function displayText() {
+
+function displayText(event) {
   let inputElement = document.querySelector(".myInput");
   let textOutputElement = document.querySelector("#out");
   let text = inputElement.value;
@@ -60,9 +61,13 @@ let str_ing = "";
 let tr = document.querySelectorAll("[data-id]");
 let ar = [];
 function fNums(num) {
-  console.log(num);
-
   for (let i = 0; i < tr.length; i++) {
+    let result = findUniqueNumber(num, tr[i].dataset.id);
+    // let r = result.filter((el) => {
+    //   return el !== undefined;
+    // });
+    // console.log(result);
+
     if (tr[i].dataset.id == "Стена") {
       tr[i].textContent = "Стена";
       tr[i].style.fontSize = "50px";
@@ -75,7 +80,7 @@ function fNums(num) {
       tr[i].textContent = "Средние-ряды";
       tr[i].style.fontSize = "50px";
     }
-    if (tr[i].dataset.id == num) {
+    if (tr[i].dataset.id == result) {
       tr[i].style.color = "red";
       tr[i].style.background = "aqua";
       tr[i].style.fontSize = "40px";
@@ -90,3 +95,23 @@ function fNums(num) {
 // console.log(str_ing);
 
 // console.log(num);
+
+function findUniqueNumber(num, data) {
+  let arr = new Array(data);
+
+  let arrEnd = arr.filter((el) => {
+    return el.toString().trim().endsWith(num);
+  });
+  console.log(arrEnd);
+
+  if (arrEnd.length == 1) {
+    console.log(1);
+
+    let b = arrEnd[0];
+    console.log(b);
+
+    return b;
+  } else {
+    false;
+  }
+}
